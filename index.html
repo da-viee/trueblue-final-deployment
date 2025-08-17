@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Your Account - TrueBlue</title>
-    <!-- We will continue to use the same CSS file -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Using Inter font which matches the design much better -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <div class="onboarding-container">
         <div class="onboarding-card">
             <div class="card-header">
-                <!-- Title has a different color and font in the design -->
                 <h1 class="form-title">Create your account</h1>
                 <p class="form-subtitle">Enjoy fast, reliable package delivery across Nigeria today!</p>
             </div>
 
-            <!-- Signup Form -->
+            <!-- 
+                BACKEND NOTE:
+                This form's action points to the next step in the flow.
+                A Netlify Function (e.g., /.netlify/functions/signup) would handle this.
+                It would validate data, create a user, send an OTP, and then redirect.
+            -->
             <form id="signup-form">
                 <div class="form-group">
                     <label for="phone">Enter your phone number</label>
@@ -32,7 +32,6 @@
                         <input type="tel" id="phone" name="phone" class="form-control" placeholder="0806 754 6754" required>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="password">Create Password</label>
                     <div class="input-wrapper">
@@ -41,7 +40,6 @@
                     </div>
                     <small class="input-hint">Minimum of 8 Digit</small>
                 </div>
-
                 <div class="form-group">
                     <label for="confirm-password">Confirm Password</label>
                     <div class="input-wrapper">
@@ -49,25 +47,16 @@
                         <input type="password" id="confirm-password" name="confirm_password" class="form-control" placeholder="Re-enter password" required>
                     </div>
                 </div>
-
                 <button type="submit" class="btn btn-primary btn-full-width">
                      Sign up &nbsp;<i class="fa-solid fa-arrow-right-long"></i>
                 </button>
             </form>
 
-            <div class="divider">
-                <span>OR</span>
-            </div>
+            <div class="divider"><span>OR</span></div>
             
             <div class="social-logins">
-                <button class="btn btn-social">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
-                    Continue with Google
-                </button>
-                <button class="btn btn-social">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
-                    Continue with Facebook
-                </button>
+                <button class="btn btn-social"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"> Continue with Google</button>
+                <button class="btn btn-social"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"> Continue with Facebook</button>
             </div>
 
             <div class="card-footer-link">
@@ -75,7 +64,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // This script handles form validation and navigation.
         document.getElementById('signup-form').addEventListener('submit', function(event) {
@@ -89,6 +77,7 @@
                 alert("Passwords do not match. Please try again.");
             } else {
                 // If passwords match, redirect to the verify page using JavaScript.
+                // This performs a GET request, which works on a static server.
                 window.location.href = 'verify.html';
             }
         });

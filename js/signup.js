@@ -23,8 +23,3 @@ signupForm.addEventListener('submit', function(event) {
     console.log("Form is valid. Redirecting to OTP verification...");
     window.location.href = 'verify.html';
 });
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 9d6c8184f21f3dd42416ab93dc8bff2d3ef27c00
