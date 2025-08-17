@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Language - TrueBlue</title>
+    <!-- This page uses the single, main style.css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="onboarding-container">
+        <div class="onboarding-card">
+            <div class="card-header">
+                <h1 class="form-title">Choose Your Language</h1>
+                <p class="form-subtitle">Select your preferred language for the app</p>
+            </div>
+
+            <!-- 
+                BACKEND NOTE:
+                This form's action points to the final step. A Netlify Function
+                would take the hidden 'lang' input and save it to the user's profile.
+            -->
+<<<<<<< HEAD
+            <form id="language-form" action="account-created.html" method="GET">
+=======
+            <form id="language-form" action="account-created.html" method="POST">
+>>>>>>> 9d6c8184f21f3dd42416ab93dc8bff2d3ef27c00
+                <input type="hidden" name="lang" id="selected-lang" value="en">
+
+                <div class="language-list">
+                    <!-- English -->
+                    <button type="button" class="language-option selected" data-lang="en">
+                        <div class="lang-info">
+                            <img src="https://flagcdn.com/w40/gb.png" class="lang-icon" alt="UK Flag">
+                            <div class="lang-text">
+                                <span class="lang-name">English</span>
+                                <span class="lang-native">English</span>
+                            </div>
+                        </div>
+                        <svg class="checkmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                    </button>
+                    <!-- Nigerian Pidgin -->
+                    <button type="button" class="language-option" data-lang="pi">
+                        <div class="lang-info">
+                            <img src="https://flagcdn.com/w40/ng.png" class="lang-icon" alt="Nigeria Flag">
+                            <div class="lang-text">
+                                <span class="lang-name">Nigerian Pidgin</span>
+                                <span class="lang-native">Naija Pidgin</span>
+                            </div>
+                        </div>
+                        <svg class="checkmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                    </button>
+                    <!-- Hausa -->
+                    <button type="button" class="language-option" data-lang="ha">
+                         <div class="lang-info">
+                            <svg class="lang-icon globe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                            <div class="lang-text">
+                                <span class="lang-name">Hausa</span>
+                                <span class="lang-native">Harshen Hausa</span>
+                            </div>
+                        </div>
+                        <svg class="checkmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                    </button>
+                    <!-- Yoruba -->
+                    <button type="button" class="language-option" data-lang="yo">
+                        <div class="lang-info">
+                           <svg class="lang-icon globe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                           <div class="lang-text">
+                               <span class="lang-name">Yoruba</span>
+                               <span class="lang-native">Ede Yoruba</span>
+                           </div>
+                       </div>
+                       <svg class="checkmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                   </button>
+                   <!-- Igbo -->
+                   <button type="button" class="language-option" data-lang="ig">
+                        <div class="lang-info">
+                           <svg class="lang-icon globe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                           <div class="lang-text">
+                               <span class="lang-name">Igbo</span>
+                               <span class="lang-native">Asụsụ Igbo</span>
+                           </div>
+                       </div>
+                       <svg class="checkmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17l-4.17-4.17-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg>
+                   </button>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/language-select.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* ===================================
+   NOTIFICATIONS PAGE STYLES
+====================================== */
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.page-header-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: var(--text-dark);
+}
+.page-header-text p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin: 0;
+}
+.btn-mark-as-read {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Notifications Container */
+.notifications-container {
+    background-color: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+.filter-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    background-color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+}
+.filter-tab.active {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+.filter-tab:not(.active):hover {
+    background-color: var(--background-grey);
+}
+
+/* Notification List */
+.notification-list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: var(--white);
+    border-left: 4px solid transparent; /* For read items */
+    transition: background-color 0.2s ease;
+}
+.notification-item:hover {
+    background-color: var(--background-grey);
+}
+
+.notification-item.unread {
+    background-color: var(--light-primary-color);
+    border-left: 4px solid var(--primary-blue);
+}
+.notification-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F2F5; /* Default background */
+    color: var(--text-light);
+}
+.notification-icon svg { width: 22px; height: 22px; }
+
+/* Icon Color Variants */
+.notification-item.error .notification-icon { background-color: #FEE2E2; color: #DC2626; } /* Red */
+.notification-item.success .notification-icon { background-color: #D1FAE5; color: #065F46; } /* Green */
+.notification-item.star .notification-icon { background-color: #FEF3C7; color: #D97706; } /* Yellow */
+
+.notification-content { flex-grow: 1; }
+.notification-content h4 { font-size: 16px; font-weight: 600; margin: 0 0 4px 0; color: var(--text-dark); }
+.notification-content p { font-size: 14px; color: var(--text-light); margin: 0 0 8px 0; line-height: 1.5; }
+.notification-time { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-light); }
+.notification-time svg { width: 14px; height: 14px; }
+
+.notification-actions { display: flex; align-items: center; gap: 12px; }
+.btn-action { background-color: var(--white); color: var(--text-dark); border: 1px solid #D1D5DB; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px; }
+.btn-dismiss { background: none; border: none; font-size: 24px; color: var(--text-light); cursor: pointer; padding: 0 4px; }

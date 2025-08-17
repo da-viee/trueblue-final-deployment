@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/notifications.css"> <!-- New CSS for this page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <button class="burger-menu" id="burger-menu"><span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span></button>
+            <img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo">
+        </div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn"><img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon"><span class="notification-badge">1</span></button>
+                <button class="action-btn"><img src="assets/side-profile.png" alt="Profile" class="top-nav-icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><img src="assets/send-gray-bar.png" class="nav-icon icon-inactive" alt=""><span>Dashboard</span></a></li>
+                    <li><a href="send-package.html"><img src="assets/side-gift.png" class="nav-icon icon-inactive" alt=""><span>Send Package</span></a></li>
+                    <li><a href="track-package.html"><img src="assets/side-search.png" class="nav-icon icon-inactive" alt=""><span>Track package</span></a></li>
+                    <li><a href="rate-rider.html"><img src="assets/side-star.png" class="nav-icon icon-inactive" alt=""><span>Rate Rider</span></a></li>
+                    <li><a href="past-deliveries.html"><img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt=""><span>Past Deliveries</span></a></li>
+                    <li class="active"><a href="notifications.html"><img src="assets/side-notification.png" class="nav-icon icon-inactive" alt=""><img src="assets/side-notification.png" class="nav-icon icon-active" alt=""><span>Notifications</span></a></li>
+                    <li><a href="profile.html"><img src="assets/side-profile.png" class="nav-icon icon-inactive" alt=""><span>Profile</span></a></li>
+                    <li><a href="#"><img src="assets/side-location.png" class="nav-icon icon-inactive" alt=""><span>Pickup Points</span></a></li>
+                    <li><a href="#"><img src="assets/side-info.png" class="nav-icon icon-inactive" alt=""><span>Support</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Notifications</h1>
+                        <p>Stay updated with your deliveries and account activity</p>
+                    </div>
+                    <button class="btn-mark-as-read">Mark all as read</button>
+                </div>
+                
+                <div class="notifications-container">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All (6)</button>
+                        <button class="filter-tab" data-filter="unread">Unread (3)</button>
+                    </div>
+
+                    <div class="notification-list">
+                        <!-- Notification Item 1 -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon"><img src="assets/delivery.png" alt="Delivery Icon" width="24" height="24"></div>
+                            <div class="notification-content">
+                                <h4>Package Delivered Successfully</h4>
+                                <p>Your package NGP-2024-001 has been deliver to Lagos Island. Rate your rider experience!</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 minutes ago</div>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="rate-rider.html" class="btn-action">Rate Rider</a>
+                                <button class="btn-dismiss">&times;</button>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item 2 -->
+                        <div class="notification-item unread">
+                            <div class="notification-icon"><img src="assets/delivery.png" alt="Delivery Icon" width="24" height="24"></div>
+                            <div class="notification-content">
+                                <h4>Rider is heading to you</h4>
+                                <p>Kemi is on his way to pick up your delivery from Computer village. ETA: 15 minutes.</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 minutes ago</div>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="track-package.html" class="btn-action">Track Package</a>
+                                <button class="btn-dismiss">&times;</button>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item 3 -->
+                        <div class="notification-item unread error">
+                             <div class="notification-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+                            <div class="notification-content">
+                                <h4>Pending Pickup</h4>
+                                <p>Emeka was unable to reach you for your pick up at design village.</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 minutes ago</div>
+                            </div>
+                             <div class="notification-actions">
+                                <a href="track-package.html" class="btn-action">Track Package</a>
+                                <button class="btn-dismiss">&times;</button>
+                            </div>
+                        </div>
+
+                        <!-- Notification Item 4 -->
+                        <div class="notification-item">
+                             <div class="notification-icon success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                            <div class="notification-content">
+                                <h4>Payment Confirmed</h4>
+                                <p>Your payment for package NGP-2024-001 has been Processed.</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 hour ago</div>
+                            </div>
+                            <div class="notification-actions"><button class="btn-dismiss">&times;</button></div>
+                        </div>
+
+                         <!-- Notification Item 5 -->
+                        <div class="notification-item">
+                            <div class="notification-icon"><img src="assets/delivery.png" alt="Delivery Icon" width="24" height="24"></div>
+                            <div class="notification-content">
+                                <h4>Rider is heading to you</h4>
+                                <p>Kemi is on his way to pick up your delivery from Computer village. ETA: 15 minutes.</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 minutes ago</div>
+                            </div>
+                            <div class="notification-actions">
+                                <a href="track-package.html" class="btn-action">Track Package</a>
+                                <button class="btn-dismiss">&times;</button>
+                            </div>
+                        </div>
+
+                         <!-- Notification Item 6 -->
+                        <div class="notification-item">
+                             <div class="notification-icon star"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                            <div class="notification-content">
+                                <h4>Thank you for your feedback!</h4>
+                                <p>Your five star rating for Ibrahim has been recorded. Keep spreading the love!</p>
+                                <div class="notification-time"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 1 day ago</div>
+                            </div>
+                            <div class="notification-actions"><button class="btn-dismiss">&times;</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="dashboard-footer">...</footer>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>

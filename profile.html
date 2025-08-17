@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Settings - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/profile.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <header class="top-nav">
+        <div class="top-nav-left"><button class="burger-menu" id="burger-menu"><span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span></button><img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo"></div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn"><img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon"><span class="notification-badge">1</span></button>
+                <button class="action-btn"><img src="assets/side-profile.png" alt="Profile" class="top-nav-icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">
+                        <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="send-package.html">
+                        <img src="assets/side-gift.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/gift.png" class="nav-icon icon-active" alt="">
+                        <span>Send Package</span>
+                    </a></li>
+                    <li><a href="track-package.html"><img src="assets/side-search.png" class="nav-icon icon-inactive" alt=""><span>Track package</span></a></li>
+                    <li><a href="rate-rider.html">
+                        <img src="assets/side-star.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/blue-star.png" class="nav-icon icon-active" alt="">
+                        <span>Rate Rider</span>
+                    </a></li>
+                    <li><a href="past-deliveries.html"><img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt=""><span>Past Deliveries</span></a></li>
+                    <li><a href="notifications.html"><img src="assets/side-notification.png" class="nav-icon icon-inactive" alt=""><span>Notifications</span></a></li>
+                    <li class="active"><a href="profile.html"><img src="assets/side-profile.png" class="nav-icon icon-inactive" alt=""><img src="assets/send-blue.png" class="nav-icon icon-active" alt=""><span>Profile</span></a></li>
+                    <li><a href="#"><img src="assets/side-location.png" class="nav-icon icon-inactive" alt=""><span>Pickup Points</span></a></li>
+                    <li><a href="#"><img src="assets/side-info.png" class="nav-icon icon-inactive" alt=""><span>Support</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Profile & Settings</h1>
+                        <p>Manage your account information and preferences</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card-section-header">
+                        <div class="header-icon"><img src="assets/profile-blue.png" alt=""></div>
+                        <div class="header-text"><h3>Profile Information</h3><p>Your account details and contact information</p></div>
+                    </div>
+                    <div class="info-grid">
+                        <div class="info-item"><span>Full Name</span><strong>Juliet</strong></div>
+                        <div class="info-item phone-item">
+                            <div><span>Phone Number</span><strong>+2349187470384 <span class="badge verified">Verified</span></strong></div>
+                            <button class="btn-edit"><img src="assets/edit-icon.png" alt="Edit"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card-section-header">
+                        <div class="header-icon"><img src="assets/language-icon.png" alt=""></div>
+                        <div class="header-text"><h3>Language & Region</h3><p>Choose your preferred language for the app</p></div>
+                    </div>
+                    <div class="form-group-inline">
+                        <label for="app-language">App Language</label>
+                        <div class="custom-select">
+                             <select id="app-language"><option>GB English</option></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="card-section-header">
+                        <div class="header-icon"><img src="assets/location-blue.png" alt=""></div>
+                        <div class="header-text"><h3>Saved Addresses</h3><p>Manage frequently used pickup and delivery location</p></div>
+                        <button class="btn-add-address"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Address</button>
+                    </div>
+                    <div class="address-list">
+                        <div class="address-item">
+                            <div class="address-details"><strong>Home <span class="badge default">Default</span></strong><p>15 Admiralty Way, Lekki Phase 1, Lagos</p></div>
+                            <div class="address-actions"><button class="btn-delete"><img src="assets/delete-icon.png" alt="Delete"></button></div>
+                        </div>
+                        <div class="address-item">
+                            <div class="address-details"><strong>Office</strong><p>Plot 1004, Victoria Island, Lagos</p></div>
+                            <div class="address-actions"><button class="btn-set-default">Set Default</button><button class="btn-delete"><img src="assets/delete-icon.png" alt="Delete"></button></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <div class="card-section-header">
+                         <div class="header-icon"><img src="assets/preferences-icon.png" alt=""></div>
+                        <div class="header-text"><h3>Preferences</h3><p>Customize your app experience and notifications</p></div>
+                    </div>
+                    <div class="preference-list">
+                        <div class="preference-item"><div><strong>Data Saver Mode</strong><p>Reduce data usage by loading fewer images</p></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+                        <div class="preference-item"><div><strong>Push Notifications</strong><p>Receive delivery updates and promotions</p></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                        <div class="preference-item"><div><strong>SMS Notifications</strong><p>Get important updates via text message</p></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                    </div>
+                </div>
+
+                <div class="grid-layout-2-col">
+                    <div class="profile-card action-card">
+                         <div class="card-section-header no-border"><div class="header-icon"><img src="assets/preferences-icon.png" alt=""></div><h3>Preferences</h3></div>
+                        <div class="action-list"><a href="#" class="action-item"><img src="assets/pin-icon.png" alt=""> Change Pin</a><a href="#" class="action-item"><img src="assets/phone-icon.png" alt=""> Update Phone Number</a></div>
+                    </div>
+                     <div class="profile-card action-card">
+                        <div class="card-section-header no-border"><div class="header-icon"><img src="assets/support-icon.png" alt=""></div><h3>Support</h3></div>
+                        <div class="action-list"><a href="#" class="action-item"><img src="assets/help-icon.png" alt=""> Help Center</a><a href="#" class="action-item"><img src="assets/contact-icon.png" alt=""> Contact Support</a></div>
+                    </div>
+                </div>
+                
+                <button class="btn-sign-out"><img src="assets/signout-icon.png" alt=""> Sign Out</button>
+
+                <div class="final-banner-yellow">
+                    <p>We dey here for you! Need help with anything? Contact our support team anytime. We are here to serve you better! 🚀</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

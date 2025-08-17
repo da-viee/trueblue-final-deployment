@@ -1,0 +1,181 @@
+/* ===================================
+   SEND PACKAGE - LAYOUT & HEADER (CORRECTED)
+====================================== */
+.send-package-container {
+    background-color: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+.sp-header { padding: 24px 32px; border-bottom: 1px solid var(--border-color); }
+.sp-header h1 { font-size: 24px; margin: 0 0 4px 0; font-weight: 600; color: var(--text-dark); }
+.sp-header p { font-size: 15px; color: var(--text-light); margin: 0; }
+
+/* ===================================
+   STEPPER / PROGRESS BAR (CORRECTED FOR PROFILE ICONS)
+====================================== */
+.stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    gap: 8px;
+}
+
+.stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    gap: 0;
+}
+
+.stepper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    position: relative;
+    min-width: 80px;
+}
+
+.stepper-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stepper-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Initially show only the inactive icon */
+.stepper-icon .icon-completed,
+.stepper-icon .icon-active {
+    display: none;
+}
+
+.stepper-line {
+    width: 60px;
+    height: 2px;
+    background-color: #E5E7EB; /* Default gray line */
+    margin: 0;
+    margin-top: 16px; /* Center with the 32px icons */
+    transition: all 0.3s ease;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.stepper-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    min-width: 60px;
+}
+
+.stepper-label {
+    font-size: 12px;
+    color: #6B7280; /* Gray for future step labels */
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 8px; /* Space between progress bar and label */
+    width: 100%;
+}
+
+/* Active State (Current Step) - Blue */
+.stepper-item.active .stepper-label {
+    color: var(--primary-blue); /* Blue text */
+    font-weight: 600;
+}
+
+/* Completed State - Green */
+.stepper-item.completed .stepper-label {
+    color: #1F2937; /* Dark text for completed steps */
+    font-weight: 500;
+}
+
+/* Progress bar images are handled by JavaScript */
+
+/* Last item shouldn't have a line */
+.stepper-item:last-child .stepper-line {
+    display: none;
+}
+
+/* ===================================
+   FORM STEPS
+====================================== */
+.form-steps-wrapper { padding: 32px; }
+.form-step { display: none; animation: fadeIn 0.5s ease; }
+.form-step.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.form-card { border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; }
+.form-card-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+.form-card-icon { color: var(--primary-blue); }
+.form-card-title h3 { font-size: 18px; font-weight: 600; margin: 0 0 4px 0; color: var(--text-dark); }
+.form-card-title p { font-size: 14px; color: var(--text-light); margin: 0; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: var(--text-dark); }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #D1D5DB; font-size: 15px; font-family: var(--font-family); }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px var(--light-blue-bg); }
+.map-placeholder { height: 150px; background-color: var(--background-grey); border: 1px dashed #D1D5DB; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-light); }
+.form-navigation { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; }
+.form-navigation button { padding: 12px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; }
+.form-navigation .btn-next { background-color: var(--primary-blue); color: var(--white); }
+.form-navigation .btn-back { background-color: var(--white); color: var(--text-dark); border: 1px solid #D1D5DB; }
+
+/* Radio & Checkbox Groups */
+.radio-group { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+.radio-option, .checkbox-option { display: flex; align-items: center; padding: 16px; border: 1px solid #D1D5DB; border-radius: 8px; cursor: pointer; }
+.radio-option input, .checkbox-option input { display: none; }
+.radio-option:has(input:checked), .checkbox-option:has(input:checked) { border-color: var(--primary-blue); background-color: var(--light-blue-bg); }
+.radio-content { flex-grow: 1; text-align: left; }
+.radio-title { font-weight: 600; color: var(--text-dark); }
+.radio-desc { font-size: 14px; color: var(--text-light); }
+.radio-badge { padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+.radio-badge.free { background-color: #E0F2FE; color: #0C54B7; }
+.radio-badge.express { background-color: #FEF3C7; color: #9A3412; }
+
+/* Cost & Payment */
+.cost-summary { display: flex; justify-content: space-between; align-items: center; background-color: var(--light-blue-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px; }
+.cost-amount { font-size: 20px; font-weight: 700; color: var(--text-dark); }
+.discount-group { display: flex; gap: 12px; }
+.discount-group input { flex-grow: 1; }
+.btn-apply { padding: 12px 24px; border-radius: 8px; background-color: var(--white); color: var(--text-dark); border: 1px solid #D1D5DB; font-weight: 600; cursor: pointer; }
+
+/* ===================================
+   SUCCESS STEP
+====================================== */
+.success-card { text-align: center; padding: 32px; }
+.success-icon { width: 60px; height: 60px; border-radius: 50%; background-color: #D1FAE5; color: #065F46; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; }
+.success-card h3 { font-size: 22px; margin-bottom: 8px; }
+.success-card p { color: var(--text-light); margin-bottom: 24px; }
+.tracking-info { background-color: var(--background-grey); border-radius: 8px; padding: 12px; margin-bottom: 24px; }
+.tracking-info span { display: block; font-size: 13px; color: var(--text-light); }
+.tracking-info strong { font-size: 18px; color: var(--text-dark); }
+.qr-code-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; height: 150px; border: 1px dashed #D1D5DB; justify-content: center; color: var(--text-light); border-radius: 8px; margin-bottom: 24px; }
+.qr-code-placeholder img { width: 80px; height: 80px; }
+.booking-summary { display: flex; flex-direction: column; gap: 12px; text-align: left; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 24px 0; margin-bottom: 32px; }
+.summary-item { display: flex; justify-content: space-between; }
+.summary-item span:first-child { color: var(--text-light); }
+.summary-item span:last-child { font-weight: 600; }
+.success-actions { display: flex; gap: 16px; margin-bottom: 24px; }
+.success-actions button, .success-actions a { width: 100%; text-decoration: none; display: flex; align-items: center; justify-content: center; padding: 12px; border-radius: 8px; font-size: 15px; font-weight: 600; border: none; cursor: pointer; }
+.success-actions .btn-primary { background-color: var(--primary-blue); color: var(--white); }
+.success-actions .btn-secondary { background-color: var(--white); color: var(--text-dark); border: 1px solid #D1D5DB; }
+.success-banner { background-color: #EAFBF1; color: #3B925A; padding: 16px; border-radius: 8px; font-weight: 500; }

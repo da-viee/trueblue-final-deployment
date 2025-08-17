@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery History - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/past-deliveries.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <header class="top-nav">
+        <div class="top-nav-left"><button class="burger-menu" id="burger-menu"><span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span></button><img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo"></div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn"><img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon"><span class="notification-badge">1</span></button>
+                <button class="action-btn"><img src="assets/side-profile.png" alt="Profile" class="top-nav-icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">
+                        <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="send-package.html">
+                        <img src="assets/side-gift.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/gift.png" class="nav-icon icon-active" alt="">
+                        <span>Send Package</span>
+                    </a></li>
+                    <li><a href="track-package.html"><img src="assets/side-search.png" class="nav-icon icon-inactive" alt=""><span>Track package</span></a></li>
+                    <li><a href="rate-rider.html">
+                        <img src="assets/side-star.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/blue-star.png" class="nav-icon icon-active" alt="">
+                        <span>Rate Rider</span>
+                    </a></li>
+                    <li class="active"><a href="past-deliveries.html"><img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt=""><img src="assets/blue-recycle.png" class="nav-icon icon-active" alt=""><span>Past Deliveries</span></a></li>
+                    <li><a href="notifications.html"><img src="assets/side-notification.png" class="nav-icon icon-inactive" alt=""><span>Notifications</span></a></li>
+                    <li><a href="profile.html"><img src="assets/side-profile.png" class="nav-icon icon-inactive" alt=""><span>Profile</span></a></li>
+                    <li><a href="#"><img src="assets/side-location.png" class="nav-icon icon-inactive" alt=""><span>Pickup Points</span></a></li>
+                    <li><a href="#"><img src="assets/side-info.png" class="nav-icon icon-inactive" alt=""><span>Support</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Delivery History</h1>
+                        <p>Track and manage all your past deliveries</p>
+                    </div>
+                    <button class="btn-export"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export Report</button>
+                </div>
+
+                <section class="history-stats">
+                    <div class="history-stat-card"><div><p>Total Deliveries</p><strong>5</strong></div><div class="h-icon"><img src="assets/delivery.png" alt=""></div></div>
+                    <div class="history-stat-card"><div><p>Delivered</p><strong>3</strong></div><div class="h-icon success"><img src="assets/green-check.png" alt=""></div></div>
+                    <div class="history-stat-card"><div><p>In Transit</p><strong>1</strong></div><div class="h-icon transit"><img src="assets/delivery.png" alt=""></div></div>
+                    <div class="history-stat-card"><div><p>Total Spent</p><strong>N11,200</strong></div><div class="h-icon"><img src="assets/cost-icon.png" alt=""></div></div>
+                </section>
+
+                <section class="history-filters">
+                    <div class="search-bar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><input type="text" placeholder="Search tracking ID, recipient"></div>
+                    <div class="filter-dropdown"><select><option>All Status</option><option>Delivered</option><option>In Transit</option><option>Cancelled</option></select></div>
+                    <div class="filter-date"><input type="date" placeholder="Pick a date"></div>
+                    <button class="btn-clear-filters">Clear</button>
+                </section>
+
+                <div class="delivery-list">
+                    <!-- Delivery Item 1 -->
+                    <div class="delivery-item">
+                        <div class="delivery-item-header">
+                            <div class="delivery-id"><div class="delivery-id-icon delivered"><img src="assets/green-check.png" alt=""></div><div class="delivery-id-text"><strong>NGP-2024-001</strong><span>Jul 20, 2024</span></div></div>
+                            <div class="delivery-status delivered">Delivered</div>
+                            <div class="delivery-price">N2,500</div>
+                        </div>
+                        <div class="delivery-details">
+                            <div class="detail-group"><div class="detail-text"><strong>From</strong><span>Computer Village, Ikeja, Lagos.</span></div></div>
+                            <div class="detail-group"><div class="detail-text"><strong>To</strong><span>1004 Estate, Victoria Island, Lagos</span></div></div>
+                        </div>
+                        <div class="delivery-footer">
+                            <div class="rider-info"><img src="assets/rider.png" alt="Rider"><div class="rider-name"><strong>Ibrahim Musa</strong><span>4.8 <img src="assets/star.png" class="star-rating" alt="rating"></span></div></div>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                    <!-- Delivery Item 2 -->
+                    <div class="delivery-item">
+                        <div class="delivery-item-header">
+                            <div class="delivery-id"><div class="delivery-id-icon in-transit"><img src="assets/delivery.png" alt=""></div><div class="delivery-id-text"><strong>NGP-2024-002</strong><span>Jul 18, 2024</span></div></div>
+                            <div class="delivery-status in-transit">In transit</div>
+                            <div class="delivery-price">N3,000</div>
+                        </div>
+                        <div class="delivery-details">
+                            <div class="detail-group"><div class="detail-text"><strong>From</strong><span>Yaba, Lagos</span></div></div>
+                            <div class="detail-group"><div class="detail-text"><strong>To</strong><span>Surulere, Lagos</span></div></div>
+                        </div>
+                        <div class="delivery-footer">
+                            <div class="rider-info"><img src="assets/rider.png" alt="Rider"><div class="rider-name"><strong>Aisha Bello</strong><span>4.9 <img src="assets/star.png" class="star-rating" alt="rating"></span></div></div>
+                            <button class="btn-details">View Details</button>
+                        </div>
+                    </div>
+                    <!-- Delivery Item 3 -->
+                    <div class="delivery-item">
+                        <div class="delivery-item-header">
+                            <div class="delivery-id"><div class="delivery-id-icon delivered"><img src="assets/green-check.png" alt=""></div><div class="delivery-id-text"><strong>NGP-2024-003</strong><span>Jul 15, 2024</span></div></div>
+                            <div class="delivery-status delivered">Delivered</div>
+                            <div class="delivery-price">N2,200</div>
+                        </div>
+                        <!-- ... details ... -->
+                    </div>
+                    <!-- Delivery Item 4 -->
+                    <div class="delivery-item">
+                        <div class="delivery-item-header">
+                            <div class="delivery-id"><div class="delivery-id-icon cancelled"><img src="assets/cancel-icon.png" alt=""></div><div class="delivery-id-text"><strong>NGP-2024-004</strong><span>Jul 12, 2024</span></div></div>
+                            <div class="delivery-status cancelled">Cancelled</div>
+                            <div class="delivery-price">N1,500</div>
+                        </div>
+                        <!-- ... details ... -->
+                    </div>
+                    <!-- Delivery Item 5 -->
+                     <div class="delivery-item">
+                        <div class="delivery-item-header">
+                            <div class="delivery-id"><div class="delivery-id-icon delivered"><img src="assets/green-check.png" alt=""></div><div class="delivery-id-text"><strong>NGP-2024-005</strong><span>Jul 10, 2024</span></div></div>
+                            <div class="delivery-status delivered">Delivered</div>
+                            <div class="delivery-price">N2,000</div>
+                        </div>
+                        <!-- ... details ... -->
+                    </div>
+                </div>
+
+                <div class="pagination-summary">
+                    <p>Showing 5 of 5 deliveries</p>
+                </div>
+
+                <div class="final-banner">
+                    <p>You don't use TrueBlue Services well? 3 Successful deliveries across Nigeria. Keep using our services🚀</p>
+                </div>
+            </div>
+            <footer class="dashboard-footer">
+                <div class="footer-content">
+                    <div class="footer-column brand-info">
+                        <img src="assets/true-blue-text.png" alt="TrueBlue Express Logo" class="footer-logo">
+                        <p>Fast reliable package delivery across Nigeria. From Lagos to Kano, we deliver with speed and care.</p>
+                        <div class="social-icons">
+                            <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                            <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="assets/twitter-X.png" alt="X"></a>
+                        </div>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Quick Links</h4>
+                        <ul><li><a href="#">Dashboard</a></li><li><a href="#">Send Package</a></li><li><a href="#">Track Package</a></li><li><a href="#">Rate Riders</a></li><li><a href="#">Notifications</a></li><li><a href="#">Profile</a></li></ul>
+                    </div>
+                    <div class="footer-column contact">
+                        <h4>Contact Us</h4>
+                        <ul><li>+234 55667879</li><li>support@trueblue.ng</li><li>Lagos, Nigeria</li></ul>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Legal</h4>
+                        <ul><li><a href="#">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Help Center</a></li></ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 TrueBlue Express. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

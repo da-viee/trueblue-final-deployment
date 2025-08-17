@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Number - TrueBlue</title>
+    <!-- This page uses the single, main style.css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <div class="onboarding-card">
+            <div class="card-header">
+                <h1 class="form-title">Verify Your Number</h1>
+                <!-- BACKEND NOTE: The phone number should be dynamically inserted here -->
+                <p class="form-subtitle">Enter the 6-digit code sent to 0809 123 4567!</p>
+            </div>
+
+            <!-- 
+                BACKEND NOTE:
+                This form's action points to the next step. A Netlify Function
+                would process the OTP submitted from this form. If correct, it would
+                redirect to choose-language.html.
+            -->
+            <form id="otp-form">
+                <div class="form-group">
+                    <label class="otp-label">Don't Share OTP with anyone</label>
+                    <div class="otp-input-container">
+                        <input type="tel" name="otp[]" class="form-control otp-input" maxlength="1" required>
+                        <input type="tel" name="otp[]" class="form-control otp-input" maxlength="1" required>
+                        <input type="tel" name="otp[]" class="form-control otp-input" maxlength="1" required>
+                        <input type="tel" name="otp[]" class="form-control otp-input" maxlength="1" required>
+                    </div>
+                </div>
+
+                <div class="resend-timer-container">
+                    <i class="fa-regular fa-clock"></i>&nbsp;Resend code in <span id="timer">50</span> sec
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Verify</button>
+            </form>
+            
+            <div class="card-footer-actions">
+                <a href="index.html" class="btn btn-secondary">
+                    &#x2190; Change Phone Number
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- This page requires the verify.js for interactivity -->
+    <script src="js/verify.js"></script>
+</body>
+</html>

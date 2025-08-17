@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Your Rider - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/rate-rider.css"> <!-- New CSS for this page -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <button class="burger-menu" id="burger-menu">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
+            <img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo">
+        </div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn">
+                    <img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon">
+                    <span class="notification-badge">1</span>
+                </button>
+                <button class="action-btn">
+                    <img src="assets/side-profile.png" alt="Profile" class="top-nav-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">
+                        <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="send-package.html">
+                        <img src="assets/side-gift.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/gift.png" class="nav-icon icon-active" alt="">
+                        <span>Send Package</span>
+                    </a></li>
+                    <li><a href="track-package.html">
+                        <img src="assets/side-search.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/search.png" class="nav-icon icon-active" alt="">
+                        <span>Track package</span>
+                    </a></li>
+                    <li class="active"><a href="rate-rider.html">
+                        <img src="assets/side-star.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/blue-star.png" class="nav-icon icon-active" alt="">
+                        <span>Rate Rider</span>
+                    </a></li>
+                    <li><a href="past-deliveries.html">
+                        <img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/blue-recycle.png" class="nav-icon icon-active" alt="">
+                        <span>Past Deliveries</span>
+                    </a></li>
+                    <li><a href="notifications.html">
+                        <img src="assets/side-notification.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/side-notification.png" class="nav-icon icon-active" alt="">
+                        <span>Notifications</span>
+                    </a></li>
+                    <li><a href="profile.html">
+                        <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                        <span>Profile</span>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="assets/side-location.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/side-location.png" class="nav-icon icon-active" alt="">
+                        <span>Pickup Points</span>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="assets/side-info.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/side-info.png" class="nav-icon icon-active" alt="">
+                        <span>Support</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Rate Your Rider</h1>
+                        <p>Share your delivery experience to help us improve our services</p>
+                    </div>
+                </div>
+
+                <div class="rate-container">
+                    <div class="rate-header">
+                        <h3>Select Delivery to Rate</h3>
+                    </div>
+                    <div class="delivery-to-rate-list">
+                        <!-- Item 1 -->
+                        <a href="#" class="rate-item">
+                            <div class="rider-avatar">KA</div>
+                            <div class="delivery-info">
+                                <strong>Kemi Adebayo</strong>
+                                <p><span>TrueBlue post</span><span>Completed 2 hours ago</span></p>
+                                <p>Computer village, Lagos - Victoria Island, Lagos</p>
+                            </div>
+                            <div class="delivery-price-rating">
+                                <strong>2,500</strong>
+                                <span>Rating: 245 Deliveries</span>
+                            </div>
+                            <div class="arrow-icon">&gt;</div>
+                        </a>
+                        <!-- Item 2 -->
+                        <a href="#" class="rate-item">
+                            <div class="rider-avatar">KA</div>
+                            <div class="delivery-info">
+                                <strong>Kemi Adebayo</strong>
+                                <p><span>TrueBlue post</span><span>Completed 2 hours ago</span></p>
+                                <p>Computer village, Lagos - Victoria Island, Lagos</p>
+                            </div>
+                            <div class="delivery-price-rating">
+                                <strong>2,500</strong>
+                                <span>Rating: 245 Deliveries</span>
+                            </div>
+                            <div class="arrow-icon">&gt;</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <footer class="dashboard-footer">
+                <div class="footer-content">
+                    <div class="footer-column brand-info">
+                        <img src="assets/true-blue-text.png" alt="TrueBlue Express Logo" class="footer-logo">
+                        <p>Fast reliable package delivery across Nigeria. From Lagos to Kano, we deliver with speed and care.</p>
+                        <div class="social-icons">
+                            <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                            <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="assets/twitter-X.png" alt="X"></a>
+                        </div>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Quick Links</h4>
+                        <ul><li><a href="#">Dashboard</a></li><li><a href="#">Send Package</a></li><li><a href="#">Track Package</a></li><li><a href="#">Rate Riders</a></li><li><a href="#">Notifications</a></li><li><a href="#">Profile</a></li></ul>
+                    </div>
+                    <div class="footer-column contact">
+                        <h4>Contact Us</h4>
+                        <ul><li>+234 55667879</li><li>support@trueblue.ng</li><li>Lagos, Nigeria</li></ul>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Legal</h4>
+                        <ul><li><a href="#">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Help Center</a></li></ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 TrueBlue Express. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

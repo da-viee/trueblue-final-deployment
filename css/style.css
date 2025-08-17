@@ -1,0 +1,149 @@
+/* ===================================
+   TRUEBLUE ONBOARDING STYLESHEET (FINAL - CORRECTED)
+   Author: Gemini AI
+   Date: August 2025
+   Description: Final, complete, and corrected styles for all user onboarding,
+                login, and password recovery pages. This includes all fixes for
+                the main "white box" container, mobile responsiveness, and 
+                consistent component design based on user-provided images.
+====================================== */
+
+/* ===================================
+   VARIABLES & GLOBAL STYLES
+====================================== */
+:root {
+    --primary-blue: #0066FF;
+    --dark-blue-text: #0D2A4E; /* As seen in titles */
+    --light-blue-bg: #E7F0FF;
+    --text-dark: #1E293B;
+    --text-light: #64748B;
+    --border-color: #DEE2E6;
+    --input-bg: #F8FAFC;
+    --white: #FFFFFF;
+    --background-grey: #F0F4F8; /* Main page background */
+    --font-family: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+}
+
+/* ===================================
+   THE CORRECT "WHITE BOX" FOR ALL PAGES
+   FIXED: Sizing now matches the 'Create your account' design.
+====================================== */
+.onboarding-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 20px;
+}
+
+.onboarding-card {
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card-header h1, .form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue-text);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card-header p, .form-subtitle {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 32px;
+    line-height: 1.6;
+    max-width: 350px; /* Prevents text from being too wide */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================
+   FORM & BUTTON STYLES
+====================================== */
+.form-group { margin-bottom: 24px; text-align: left; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; color: var(--text-dark); }
+.input-wrapper { position: relative; }
+.form-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 14px; }
+.form-control { width: 100%; height: 54px; padding: 0 16px 0 48px; background-color: var(--input-bg); border: 1px solid var(--border-color); border-radius: 12px; font-size: 16px; }
+.input-hint { display: block; margin-top: 8px; font-size: 13px; color: var(--text-light); }
+.divider { display: flex; align-items: center; text-align: center; margin: 32px 0; color: #94a3b8; font-size: 14px; }
+.divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid var(--border-color); }
+.divider:not(:empty)::before { margin-right: .75em; }
+.divider:not(:empty)::after { margin-left: .75em; }
+.social-logins { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.btn-social { background-color: var(--white); color: #334155; border: 1px solid #cbd5e1; display: flex; align-items: center; justify-content: center; gap: 12px; font-weight: 500; height: 54px; border-radius: 12px; }
+.btn-social img { width: 20px; height: 20px; }
+.card-footer-link { margin-top: 16px; font-size: 15px; color: #475569; }
+.card-footer-link a { color: var(--primary-blue); font-weight: 600; text-decoration: none; }
+.btn { width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; height: 54px; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+.btn-primary { background-color: var(--primary-blue); color: var(--white); }
+.btn-secondary { background-color: var(--white); color: var(--text-light); border: 1px solid var(--border-color); }
+
+/* ===================================
+   OTP PAGE STYLES - CORRECTED
+====================================== */
+.otp-label { text-align: center; color: var(--text-light); font-weight: 500; font-size: 15px; margin-bottom: 16px !important; }
+.otp-input-container { display: flex; justify-content: center; gap: 16px; margin-bottom: 24px; }
+.otp-input { width: 60px !important; height: 60px !important; text-align: center; font-size: 24px !important; font-weight: 600; padding: 0 !important; border-radius: 12px !important; border: 1px solid var(--border-color) !important; background-color: var(--white) !important; }
+.otp-input:focus { border-color: var(--primary-blue) !important; box-shadow: 0 0 0 3px var(--light-blue-bg) !important; }
+.resend-timer-container { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 24px; color: var(--text-light); font-size: 15px; }
+.card-footer-actions { margin-top: 16px; }
+
+/* ===================================
+   CHOOSE YOUR LANGUAGE PAGE - CORRECTED
+====================================== */
+.language-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.language-option { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 16px; border: 1px solid var(--border-color); border-radius: 12px; cursor: pointer; background-color: var(--input-bg); }
+.language-option.selected { background-color: var(--light-blue-bg); border-color: var(--primary-blue); }
+.lang-info { display: flex; align-items: center; gap: 16px; }
+.lang-icon { width: 32px; height: 32px; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
+.lang-text { display: flex; flex-direction: column; align-items: flex-start; }
+.lang-name { font-size: 16px; font-weight: 500; color: var(--text-dark); }
+.lang-native { font-size: 14px; color: var(--text-light); }
+.checkmark-icon { width: 20px; height: 20px; color: var(--primary-blue); visibility: hidden; flex-shrink: 0; }
+.language-option.selected .checkmark-icon { visibility: visible; }
+
+/* ===================================
+   ACCOUNT CREATED PAGE
+====================================== */
+.success-page-card { padding-top: 60px !important; padding-bottom: 60px !important; }
+#confetti-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.success-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.success-title { font-size: 28px !important; }
+.success-checkmark-img { width: 120px; height: auto; }
+
+/* ===================================
+   MOBILE RESPONSIVENESS - NO SCROLLING
+====================================== */
+@media (max-width: 500px) {
+    body { padding: 0; }
+    .onboarding-container { padding: 0; }
+    .onboarding-card {
+        border-radius: 0;
+        min-height: 100vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .form-title { font-size: 22px; }
+}

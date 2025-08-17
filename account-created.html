@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created! - TrueBlue</title>
+    <!-- This page uses the single, main style.css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="onboarding-container">
+        <!-- 
+            BACKEND NOTE:
+            This is a static success page. The user is now fully registered and verified.
+            The only interactive element is the link to the dashboard.
+        -->
+        <div class="onboarding-card success-page-card">
+            
+            <!-- This div will be populated with confetti by our JavaScript -->
+            <div id="confetti-container"></div>
+            
+            <div class="success-content">
+                <h1 class="form-title success-title">Account Created Sucessfully!</h1>
+
+                <div class="success-icon-wrapper">
+                    <img src="assets/green_check.png" alt="Success Checkmark" class="success-checkmark-img">
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary btn-full-width">
+                    Go to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- This script is required for the confetti effect -->
+    <script src="js/success.js"></script>
+</body>
+</html>

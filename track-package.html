@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Package - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="stylesheet" href="css/track-package.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <button class="burger-menu" id="burger-menu">
+                <span class="burger-bar"></span><span class="burger-bar"></span><span class="burger-bar"></span>
+            </button>
+            <img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo">
+        </div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn">
+                    <img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon">
+                    <span class="notification-badge">1</span>
+                </button>
+                <button class="action-btn">
+                    <img src="assets/side-profile.png" alt="Profile" class="top-nav-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">
+                        <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="send-package.html">
+                        <img src="assets/side-gift.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/gift.png" class="nav-icon icon-active" alt="">
+                        <span>Send Package</span>
+                    </a></li>
+                    <li class="active"><a href="track-package.html"><img src="assets/side-search.png" class="nav-icon icon-inactive" alt=""><img src="assets/search.png" class="nav-icon icon-active" alt=""><span>Track package</span></a></li>
+                    <li><a href="rate-rider.html">
+                        <img src="assets/side-star.png" class="nav-icon icon-inactive" alt="">
+                        <img src="assets/blue-star.png" class="nav-icon icon-active" alt="">
+                        <span>Rate Rider</span>
+                    </a></li>
+                    <li><a href="past-deliveries.html"><img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt=""><span>Past Deliveries</span></a></li>
+                    <li><a href="notifications.html"><img src="assets/side-notification.png" class="nav-icon icon-inactive" alt=""><span>Notifications</span></a></li>
+                    <li><a href="profile.html"><img src="assets/side-profile.png" class="nav-icon icon-inactive" alt=""><span>Profile</span></a></li>
+                    <li><a href="#"><img src="assets/side-location.png" class="nav-icon icon-inactive" alt=""><span>Pickup Points</span></a></li>
+                    <li><a href="#"><img src="assets/side-info.png" class="nav-icon icon-inactive" alt=""><span>Support</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <div class="page-header">
+                    <div class="page-header-text">
+                        <h1>Track Your Package</h1>
+                        <p>Enter your tracking ID or scan QR code to real-time updates</p>
+                    </div>
+                </div>
+
+                <!-- SEARCH STATE -->
+                <div id="search-state">
+                    <div class="track-card search-card">
+                        <form id="tracking-form">
+                            <h4>Find Your Package</h4>
+                            <p>Enter the tracking ID you received after booking your delivery</p>
+                            <div class="tracking-input-group">
+                                <input type="text" placeholder="Enter the tracking ID (e.g., NGP-2024-001)">
+                                <button type="submit" class="btn-track">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                    Track
+                                </button>
+                            </div>
+                        </form>
+                        <div class="divider"><span>OR</span></div>
+                        <button class="btn-scan-qr">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                            Scan QR Code
+                        </button>
+                    </div>
+
+                    <div class="empty-state-card">
+                        <div class="empty-state-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                        <h3>Ready to track your package?</h3>
+                        <p>Enter your tracking ID above to see real-time update about your delivery</p>
+                        <p class="empty-state-link">Don't have a tracking ID? <a href="send-package.html">Send a package</a> to get started!</p>
+                    </div>
+                </div>
+
+                <!-- RESULTS STATE (Initially hidden) -->
+                <div id="results-state" style="display: none;">
+                    <div class="tracking-header">
+                        <h4>Package NGP-2024-001</h4>
+                        <div class="tracking-header-actions">
+                            <button class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg> Refresh</button>
+                            <button class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg> Share</button>
+                        </div>
+                    </div>
+                    
+                    <div class="track-card progress-card">
+                        <div class="progress-info">
+                            <p>Out for delivery, 15-30 minutes</p>
+                            <span class="status-badge out-for-delivery">Out for delivery</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                            <span>75% Complete</span>
+                        </div>
+                        <div class="eta-details">
+                            <div class="eta-item"><span>ETA</span><strong>12:15PM</strong></div>
+                            <div class="eta-item"><span>Current Location</span><strong>Victoria Island area</strong></div>
+                            <div class="eta-item"><span>Last Update</span><strong>2 minutes ago</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-tabs">
+                        <button class="tracking-tab active" data-tab="overview">Overview</button>
+                        <button class="tracking-tab" data-tab="timeline">Timeline</button>
+                        <button class="tracking-tab" data-tab="rider">Rider</button>
+                        <button class="tracking-tab" data-tab="details">Details</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="overview">
+                            <div class="track-card">
+                                <div class="tab-card-header"><h4>Live GPS Tracking</h4><span class="badge">Live</span></div>
+                                <div class="map-placeholder-large">
+                                    <div class="map-info-box">
+                                        <h4>Live GPS Tracking</h4><p>Real-time rider location and route</p>
+                                        <ul><li>Current: Adeola odeku Street</li><li>Destination: 1004 Estate, Victoria Island, Lagos</li><li>Traffic: Light Traffic</li><li>ETA Accuracy: 95% accurate</li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="timeline">
+                            <div class="track-card">
+                                <div class="tab-card-header"><h4>Live GPS Tracking</h4></div>
+                                <div class="timeline-list">
+                                    <div class="timeline-item"><div class="timeline-icon"></div><div class="timeline-content"><h4>Package received</h4><p>Today 8:00AM</p><span>Computer Village, Ikeja</span><span>Package collected from sender and verified</span><span class="verified-tag">Verified Secure</span></div></div>
+                                    <div class="timeline-item"><div class="timeline-icon"></div><div class="timeline-content"><h4>Package Sorted</h4><p>Today 8:30AM</p><span>TrueBlue post - Ikeja</span><span>Package processed and assigned to rider</span></div></div>
+                                    <div class="timeline-item"><div class="timeline-icon"></div><div class="timeline-content"><h4>In transit to destination</h4><p>Today 10:30AM</p><span>En route to Victoria Island</span><span>Rider is heading to delivery location</span></div></div>
+                                    <div class="timeline-item"><div class="timeline-icon"></div><div class="timeline-content"><h4>Out for delivery</h4><p>Today 11:45AM</p><span>Victoria Island area</span><span>Package is with rider for final delivery</span></div></div>
+                                    <div class="timeline-item"><div class="timeline-icon"></div><div class="timeline-content"><h4>Delivered</h4><p>Expected by 12:30 PM</p><span>1004 Estate, Victoria Island</span><span>Package delivered to recepient</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="rider">
+                            <div class="track-card">
+                                <div class="tab-card-header"><h4>Your Rider</h4><p>Complete journey of your package from pickup</p></div>
+                                <div class="rider-details-grid">
+                                    <img src="assets/rider.png" alt="Rider photo" class="rider-photo">
+                                    <div class="rider-info-main"><h4>Kunle Femi <span class="badge-online">Online</span></h4><p>4.8/5.0 - 245 deliveries</p></div>
+                                    <div class="rider-info-contact"><p><span>Contact</span>+234 809 123 4567</p><p><span>Status</span>Active - On delivery route</p></div>
+                                    <div class="rider-info-details"><p><span>Vehicle</span>Honda CG125 - Red</p><p><span>Current Location</span>Adeola Odeku Street, VI</p></div>
+                                </div>
+                                <div class="rider-actions">
+                                    <button class="btn-primary-dark">Track</button>
+                                    <button class="btn-secondary-dark">Send Message</button>
+                                </div>
+                            </div>
+                            <div class="rider-performance-card">
+                                <div class="performance-item"><h4>4.8</h4><p>Average</p></div>
+                                <div class="performance-item"><h4>245</h4><p>Total Deliveries</p></div>
+                                <div class="performance-item"><h4>98%</h4><p>On-Time Rate</p></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="details">
+                            <div class="track-card"><div class="tab-card-header"><h4>Package Information</h4></div><div class="details-grid"><div><span>Package Type</span><strong>Electronics</strong></div><div><span>Declared Value</span><strong>85,000</strong></div><div><span>Weight</span><strong>2.5kg</strong></div><div><span>Description</span><strong>Laptop Computer</strong></div></div></div>
+                            <div class="track-card"><div class="tab-card-header"><h4>Pickup & Delivery Address</h4></div><div class="details-grid"><div><span>Pickup Address</span><strong>Computer Village, Ikeja Lagos</strong></div><div><span>Delivery Address</span><strong>1004 Estate, Victoria Island, Lagos</strong></div></div></div>
+                            <div class="track-card"><div class="tab-card-header"><h4>Contact Information</h4></div><div class="details-grid"><div><span>Sender</span><strong>Chidi Electronics</strong><strong>+234 809 123 4567</strong></div><div><span>Recipient</span><strong>Juliet</strong><strong>+234 809 123 4567</strong></div></div></div>
+                            <div class="track-card cost-breakdown"><div class="tab-card-header"><h4>Cost Breakdown</h4></div><div class="details-grid cost-grid"><span>Base delivery cost</span><span>2,000</span><span>Package insurance</span><span>250</span><span>Express delivery</span><span>250</span><div class="total-cost"><span>Total Paid</span><span>2,500</span></div></div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions-grid">
+                        <div class="quick-action-item"><img src="assets/share-icon.png" alt=""> Share</div>
+                        <div class="quick-action-item"><img src="assets/support-icon.png" alt=""> Contact Support</div>
+                        <div class="quick-action-item"><img src="assets/cancel-icon.png" alt=""> Cancel</div>
+                        <div class="quick-action-item"><img src="assets/reschedule-icon.png" alt=""> Reschedule</div>
+                    </div>
+                    
+                    <div class="final-banner">
+                        <p>Your Package dey move! our rider Kunle Femi is on the way, you go receive am soon!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+    <script src="js/track-package.js"></script>
+</body>
+</html>

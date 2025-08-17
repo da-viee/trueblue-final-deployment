@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TrueBlue</title>
+    <link rel="stylesheet" href="css/dashboard.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <button class="burger-menu" id="burger-menu">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
+            <img src="assets/logo.png" alt="TrueBlue Logo" class="top-nav-logo">
+        </div>
+        <div class="top-nav-right">
+            <div class="welcome-user">Welcome back, Juliet !</div>
+            <div class="user-actions">
+                <button class="action-btn notification-btn">
+                    <img src="assets/side-notification.png" alt="Notifications" class="top-nav-icon">
+                    <span class="notification-badge">1</span>
+                </button>
+                <button class="action-btn">
+                    <img src="assets/side-profile.png" alt="Profile" class="top-nav-icon">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar" id="sidebar">
+             <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/send-blue.png" class="nav-icon icon-active" alt="">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="send-package.html">
+                            <img src="assets/side-gift.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/gift.png" class="nav-icon icon-active" alt="">
+                            <span>Send Package</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="track-package.html">
+                            <img src="assets/side-search.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/search.png" class="nav-icon icon-active" alt=""> 
+                            <span>Track package</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="rate-rider.html">
+                            <img src="assets/side-star.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/blue-star.png" class="nav-icon icon-active" alt="">
+                            <span>Rate Rider</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="past-deliveries.html">
+                            <img src="assets/side-recycle.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/blue-recycle.png" class="nav-icon icon-active" alt="">
+                            <span>Past Deliveries</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <img src="assets/side-notification.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/side-notification.png" class="nav-icon icon-active" alt=""> <!-- Assumed active icon -->
+                            <span>Notifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <img src="assets/side-profile.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/send-blue.png" class="nav-icon icon-active" alt=""> <!-- Assumed active icon -->
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/side-location.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/side-location.png" class="nav-icon icon-active" alt=""> <!-- Assumed active icon -->
+                            <span>Pickup Points</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/side-info.png" class="nav-icon icon-inactive" alt="">
+                            <img src="assets/side-info.png" class="nav-icon icon-active" alt=""> <!-- Assumed active icon -->
+                            <span>Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-wrapper">
+            <div class="content-area">
+                <section class="welcome-banner">
+                    <div class="banner-content">
+                        <div class="banner-text"><h2>Welcome to TrueBlue!</h2><img src="assets/biker.png" alt="Motorbike Icon"></div>
+                        <p>Your packages, delivered with care across Nigeria</p>
+                    </div>
+                </section>
+                
+                <section class="stats-section">
+                    <div class="stat-card">
+                        <div class="stat-details"><p class="card-title">Total Deliveries</p><p class="card-value">24</p></div>
+                        <div class="stat-icon-bg"><img src="assets/gift.png" alt="gift icon"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-details"><p class="card-title">Past Deliveries</p><p class="card-value">19</p></div>
+                        <div class="stat-icon-bg"><img src="assets/green-recycle.png" alt="recycle icon"></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-details"><p class="card-title">Average Rating</p><p class="card-value">4.8</p></div>
+                        <div class="stat-icon-bg star-icon"><img src="assets/star.png" alt="star icon"></div>
+                    </div>
+                </section>
+                
+                <section class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-cards-container">
+                        <a href="send-package.html" class="action-card">
+                            <div class="action-icon-wrapper"><div class="action-icon-bg"><img src="assets/quick-gift.png" alt="Send Package"></div></div><div class="action-card-details"><h4>Send Package</h4><p>Book a new delivery</p></div>
+                        </a>
+                        <a href="track-package.html" class="action-card">
+                            <div class="action-icon-wrapper"><div class="action-icon-bg"><img src="assets/search.png" alt="Track Package"></div></div><div class="action-card-details"><h4>Track Package</h4><p>Check delivery status</p></div>
+                        </a>
+                        <a href="rate-rider.html" class="action-card">
+                            <div class="action-icon-wrapper"><div class="action-icon-bg"><img src="assets/blue-star.png" alt="Rate Rider"></div></div><div class="action-card-details"><h4>Rate Rider</h4><p>Share your experience</p></div>
+                        </a>
+                        <a href="past-deliveries.html" class="action-card">
+                            <div class="action-icon-wrapper"><div class="action-icon-bg"><img src="assets/blue-recycle.png" alt="View History"></div></div><div class="action-card-details"><h4>View History</h4><p>Past deliveries</p></div>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="recent-activity">
+                    <div class="activity-header">
+                        <h3>Your Package Updates</h3>
+                        <p class="section-subtitle">Stay updated with your latest deliveries</p>
+                    </div>
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="timeline-wrapper"><div class="activity-icon delivered"><img src="assets/green-check.png" alt="delivered"></div></div>
+                            <div class="activity-details"><h4>Package delivered to Lagos Island</h4><p>Your package TB-2025-003 has been delivered</p><span>1 minute ago</span></div>
+                            <span class="status-badge delivered">Delivered</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="timeline-wrapper"><div class="activity-icon in-transit"><img src="assets/delivery.png" alt="in transit"></div></div>
+                            <div class="activity-details"><h4>Rider on the way to Ikeja</h4><p>Juliet is heading to your pickup location</p><span>12 minutes ago</span></div>
+                            <span class="status-badge in-transit">In transit</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="timeline-wrapper"><div class="activity-icon confirmed"><img src="assets/green-check.png" alt="confirmed"></div></div>
+                            <div class="activity-details"><h4>Payment confirmed</h4><p>₦4,500 payment received for TB-2025-005</p><span>1 hour ago</span></div>
+                            <span class="status-badge confirmed">Confirmed</span>
+                        </li>
+                        <li class="activity-item">
+                            <div class="timeline-wrapper"><div class="activity-icon pending"><img src="assets/yellow.png" alt="pending"></div></div>
+                            <div class="activity-details"><h4>Package ready for pickup</h4><p>Your package from computer village is ready</p><span>15 minutes ago</span></div>
+                            <span class="status-badge pending">Pending</span>
+                        </li>
+                         <li class="activity-item">
+                            <div class="timeline-wrapper"><div class="activity-icon info"><img src="assets/info.png" alt="info"></div></div>
+                            <div class="activity-details"><h4>New delivery request</h4><p>Someone wants to send a package to your area</p><span>2 hours ago</span></div>
+                            <span class="status-badge info">Info</span>
+                        </li>
+                    </ul>
+                </section>
+                
+                 <section class="info-banner">
+                    <img src="assets/blue-bike.png" alt="motorbike" class="info-banner-icon">
+                    <p>Did you know? Our riders covers over 10,000km daily across Nigeria! From Lagos to Kano, we deliver with speed!</p>
+                </section>
+            </div>
+            <footer class="dashboard-footer">
+                <div class="footer-content">
+                    <div class="footer-column brand-info">
+                        <img src="assets/true-blue-text.png" alt="TrueBlue Express Logo" class="footer-logo">
+                        <p>Fast reliable package delivery across Nigeria. From Lagos to Kano, we deliver with speed and care.</p>
+                        <div class="social-icons">
+                            <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                            <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+                            <a href="#"><img src="assets/twitter-X.png" alt="X"></a>
+                        </div>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Quick Links</h4>
+                        <ul><li><a href="#">Dashboard</a></li><li><a href="#">Send Package</a></li><li><a href="#">Track Package</a></li><li><a href="#">Rate Riders</a></li><li><a href="#">Notifications</a></li><li><a href="#">Profile</a></li></ul>
+                    </div>
+                    <div class="footer-column contact">
+                        <h4>Contact Us</h4>
+                        <ul><li>+234 55667879</li><li>support@trueblue.ng</li><li>Lagos, Nigeria</li></ul>
+                    </div>
+                    <div class="footer-column links">
+                        <h4>Legal</h4>
+                        <ul><li><a href="#">About Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Help Center</a></li></ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 TrueBlue Express. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.rate-container {
+    background-color: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+.rate-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+.rate-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.delivery-to-rate-list {
+    display: flex;
+    flex-direction: column;
+}
+.rate-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+.rate-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+.rate-item:hover {
+    background-color: var(--background-grey);
+}
+.rider-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-primary-color);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.delivery-info {
+    flex-grow: 1;
+}
+.delivery-info strong {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.delivery-info p {
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    color: var(--text-light);
+}
+.delivery-info p span:not(:last-child)::after {
+    content: '•';
+    margin: 0 6px;
+}
+.delivery-price-rating {
+    text-align: right;
+}
+.delivery-price-rating strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+.delivery-price-rating span {
+    font-size: 13px;
+    color: var(--text-light);
+}
+.arrow-icon {
+    font-size: 20px;
+    color: var(--text-light);
+}

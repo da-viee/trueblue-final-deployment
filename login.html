@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TrueBlue</title>
+    <!-- This page uses the single, main style.css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <div class="onboarding-card">
+            <div class="card-header">
+                <h1 class="form-title">Welcome Back!</h1>
+                <p class="form-subtitle">Enjoy fast, reliable package delivery across Nigeria today!</p>
+            </div>
+
+            <!-- 
+                BACKEND NOTE:
+                This form's action points to the dashboard. A Netlify Function
+                (e.g., /.netlify/functions/login) would handle this. It would:
+                1. Verify the user's credentials against the database.
+                2. If successful, create a session/token.
+                3. Redirect to dashboard.html.
+            -->
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="phone">Enter your phone number</label>
+                    <div class="input-wrapper">
+                        <i class="form-icon fa-solid fa-phone-flip"></i>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="0806 754 6754" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="form-icon fa-solid fa-lock"></i>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="********" required>
+                    </div>
+                    <small class="input-hint">Minimum of 8 Digit</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full-width">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>&nbsp; Login
+                </button>
+            </form>
+
+            <div class="divider"><span>OR</span></div>
+            
+            <div class="social-logins">
+                <button class="btn btn-social"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google"> Login with Google</button>
+                <button class="btn btn-social"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"> Login with Facebook</button>
+            </div>
+
+            <div class="card-footer-link">
+                <p>Forgot Password? <a href="forgot-password.html">Reset Password</a></p>
+            </div>
+             <div class="card-footer-link">
+<<<<<<< HEAD
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+=======
+                <p>Don't have an account? <a href="index.html">Sign Up</a></p>
+>>>>>>> 9d6c8184f21f3dd42416ab93dc8bff2d3ef27c00
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
